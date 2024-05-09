@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import { useState } from "react";
 import NavLink from "./navLinks/navLink";
 
 const Links = () => {
-const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const links = [
     {
       title: "Home",
@@ -28,7 +28,7 @@ const [open, setOpen] = useState(false);
 
   return (
     <div>
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 xs:hidden sm:hidden md:flex  xl:flex lg:flex">
         {links.map((link) => (
           <NavLink item={link} key={link.title} />
         ))}
@@ -41,9 +41,9 @@ const [open, setOpen] = useState(false);
           <NavLink item={{ title: "Login", path: "/login" }} />
         )}
       </div>
-      <button onClick={()=>setOpen((prev)=>!prev)}>Menu</button>
+      <button onClick={() => setOpen((prev) => !prev)}>Menu</button>
       {open && (
-        <div>
+        <div className="hidden sm:absolute sm:top-[100px] sm:right-0 sm:w-[30%] sm:h-[calc(100vh-100px)] sm:flex-col sm:items-center sm:justify-center sm:gap-3 sm:bg-red-200 sm:hidden">
           {links.map((link) => (
             <NavLink item={link} key={link.title} />
           ))}
