@@ -7,9 +7,9 @@ const NavLink = ({ item }) => {
   return (
     <Link
       href={item.path}
-      className={`${`min-h[100px] p-3 rounded-xl, font-[500] text-center`} ${
+      className={`${`min-h-[10px] p-2  font-[500] text-center`} ${
         pathName === item.path &&
-        `bg-white text-black p-3 rounded-xl font-[500]`
+        `border-b-[1px] border-[#f1f1f1bf] text-white p-3  font-[500]`
       }`}
     >
       {item.title}
