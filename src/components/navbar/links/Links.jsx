@@ -16,8 +16,8 @@ const links = [
     path: "/contact",
   },
   {
-    title: "Blog",
-    path: "/blog",
+    title: "Room",
+    path: "/room",
   },
 ];
 const Links = () => {
@@ -35,7 +35,7 @@ const Links = () => {
         {session ? (
           <>
             {isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }} />}
-            <button className="logout p-2 cursor-pointer font-bold border-[#f1f1f1bf] border-b-[1px] text-white  ml-2">
+            <button className="logout font-serif p-2 cursor-pointer font-bold border-[#f1f1f1bf] border-b-[1px] text-white  ml-2">
               Logout
             </button>
           </>
